@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171030">
+<title>Passaporte DubWorks</title>
+<link rel="stylesheet" href="passaporte.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script src="passaporte.js" defer></script>
+</head>
+<body>
+<main>
+  <nav aria-label="Passaporte">
+    <span class="brand"><span aria-hidden="true">✦</span> DUBWORKS</span>
+    <span class="nav-label">PASSAPORTE DA COMUNIDADE</span>
+  </nav>
+  <header class="cover">
+    <div class="cover-seal" aria-hidden="true">
+      <svg viewBox="0 0 72 72"><path fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="M19 14h29a5 5 0 0 1 5 5v34H24a5 5 0 0 0 0 10h29M19 14v44m7-30h20M30 38h12"/><path fill="currentColor" d="m36 20 2 4 5 1-3 3v5l-4-2-4 2v-5l-3-3 5-1Z"/></svg>
+    </div>
+    <div class="cover-copy">
+      <p class="eyebrow">SELO OFICIAL DA COMUNIDADE</p>
+      <h1>Passaporte<br>DubWorks</h1>
+      <p>Guarde as lembranças de cada evento em forma de medalhas, carimbos e adesivos.</p>
+    </div>
+  </header>
+
+  <section class="panel account-panel" aria-labelledby="account-title">
+    <div>
+      <h2 id="account-title">Minha conta</h2>
+      <p id="account">Carregando…</p>
+      <small>Use no passaporte o mesmo e-mail que o Google registra no formulário.</small>
+    </div>
+    <div class="actions">
+      <button id="login-google" type="button" class="google-signin" hidden>
+        <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5Z"/>
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.25 5.48-4.76 7.18l7.73 6C44.4 38.05 46.98 31.88 46.98 24.55Z"/>
+          <path fill="#FBBC05" d="M10.53 28.59a14.4 14.4 0 0 1 0-9.18l-7.98-6.19a24 24 0 0 0 0 21.56l7.98-6.19Z"/>
+          <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.91-5.8l-7.73-6c-2.15 1.45-4.92 2.3-8.18 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48Z"/>
+        </svg>
+        Entrar com Google
+      </button>
+      <button id="login" type="button" class="secondary" hidden>Entrar com e-mail</button>
+      <button id="logout" class="secondary" hidden>Sair</button>
+      <a id="form-link" class="primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfXDuekbBu2hDtHGH1tzKXdsxUidd-O6PUEGu_AFwKG8-0xqw/viewform" target="_blank" rel="noopener noreferrer">Resgatar código ↗</a>
+    </div>
+    <form id="auth-form" hidden>
+      <h3 id="auth-title">Entrar no passaporte</h3>
+      <div id="auth-email-field">
+        <label for="auth-email">E-mail</label>
+        <input id="auth-email" type="email" autocomplete="email" required>
+      </div>
+      <div id="auth-password-field">
+        <label for="auth-password">Senha</label>
+        <input id="auth-password" type="password" autocomplete="current-password" minlength="8" required>
+      </div>
+      <button id="auth-submit" class="primary">Entrar</button>
+      <div class="auth-links">
+        <button type="button" id="auth-switch" class="secondary">Criar conta</button>
+        <button type="button" id="auth-recover" class="secondary">Esqueci minha senha</button>
+      </div>
+    </form>
+    <p id="auth-message" role="status"></p>
+  </section>
+
+  <section class="panel collection" aria-labelledby="collection-title">
+    <div class="collection-heading">
+      <div><p class="eyebrow">MEUS COLECIONÁVEIS</p><h2 id="collection-title">Minha coleção</h2></div>
+      <span id="medal-count" hidden></span>
+    </div>
+    <div id="filters" class="filters" aria-label="Filtrar coleção" hidden>
+      <button type="button" data-kind="todos" aria-pressed="true">Tudo</button>
+      <button type="button" data-kind="medalha" aria-pressed="false">Medalhas</button>
+      <button type="button" data-kind="carimbo" aria-pressed="false">Carimbos</button>
+      <button type="button" data-kind="adesivo" aria-pressed="false">Adesivos</button>
+    </div>
+    <p id="status" role="status">Carregando…</p>
+    <ul id="gallery" aria-label="Itens da coleção"></ul>
+  </section>
+  <footer>✦ DUBWORKS · COMUNIDADE ✦</footer>
+</main>
+<dialog id="item-detail" aria-labelledby="detail-title">
+  <form method="dialog"><button class="close secondary" aria-label="Fechar detalhes">×</button></form>
+  <div id="detail-emblem"></div>
+  <p class="eyebrow" id="detail-state"></p>
+  <h2 id="detail-title"></h2>
+  <p id="detail-description"></p>
+</dialog>
+</body>
+</html>
