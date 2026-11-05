@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0923a3">
+<meta name="description" content="Um ano de DubWorks. Oito datas, oito surpresas em novembro de 2026.">
+<title>DubWorks · 1 ano de surpresas</title>
+<link rel="preload" href="baloes-dubworks.png" as="image">
+<link rel="stylesheet" href="festa.css">
+<script src="surpresas.js" defer></script>
+<script src="festa.js" defer></script>
+<script src="presenca.js" defer></script>
+</head>
+<body>
+<div class="page-balloons" aria-hidden="true">
+  <span></span><span></span><span></span><span></span>
+</div>
+<header class="hero">
+<h1><img class="hero-logo" src="logo-dubworks.png" alt="DubWorks — Aniversário"></h1>
+</header>
+<main>
+<section class="count" aria-labelledby="count-title">
+<p class="eyebrow">✦ DUBWORKS FAZ 1 ANO ✦</p>
+<h2 id="count-title">O grande dia é 25/11!</h2>
+<div id="clock" class="clock" role="timer" aria-label="Tempo até o aniversário"></div>
+<p id="clock-note">25 de novembro de 2026 · horário de Brasília</p>
+</section>
+<section class="board" aria-labelledby="board-title">
+<div class="rings" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<p class="eyebrow month">NOVEMBRO 2026</p>
+<h2 id="board-title">✨ Calendário de novidades ✨</h2>
+<p class="intro">Oito datas, oito mistérios. Toque em um cartão para espiar!</p>
+<div id="cards" class="cards"></div>
+<noscript>Ative o JavaScript para abrir os cartões e ver a contagem regressiva.</noscript>
+</section>
+<section class="agenda attendance" aria-labelledby="attendance-title">
+<div>
+<h2 id="attendance-title">🏅 Passaporte da festa</h2>
+<p>Faça check-in nas sete datas até 25/11 para ganhar a medalha do primeiro aniversário. O check-out é opcional.</p>
+<p id="attendance-progress" role="status"></p>
+<p id="attendance-badge" hidden>🏅 Medalha conquistada · Eu participei do 1º aniversário da DubWorks!</p>
+<small>Seu progresso fica salvo neste navegador.</small>
+</div>
+<div class="attendance-actions">
+<button type="button" class="cta" id="check-in" hidden>Fazer check-in</button>
+<button type="button" class="cta" id="check-out" hidden>Fazer check-out</button>
+</div>
+</section>
+<section class="agenda" aria-labelledby="agenda-title">
+<div><h2 id="agenda-title">Marque na agenda!</h2><p>Baixe as oito datas e importe o arquivo no Google Agenda pelo computador.<br>A importação é única, sem sincronização automática.</p></div>
+<a class="cta" href="dubworks-novembro-2026.ics" download>↓ Baixar calendário .ics</a>
+</section>
+</main>
+<footer>✦ DUBWORKS · 1º ANIVERSÁRIO ✦</footer>
+<dialog id="detail" aria-labelledby="detail-title">
+<form method="dialog"><button class="close" aria-label="Fechar">×</button></form>
+<p id="detail-date" class="eyebrow month"></p>
+<div id="detail-icon" class="detail-icon" aria-hidden="true"></div>
+<h2 id="detail-title"></h2>
+<p id="detail-text"></p>
+<div id="detail-links" class="detail-links" hidden></div>
+<form method="dialog"><button class="cta">Voltar ao calendário</button></form>
+</dialog>
+<div id="confetti" aria-hidden="true"></div>
+</body>
+</html>
