@@ -2,11 +2,11 @@
 
 ## Abrir e publicar
 
-Abra `dist/index.html` no navegador para ver a prévia local. Mantenha os arquivos de `dist` juntos. Para compartilhar o site, publique o conteúdo de `dist` em uma hospedagem estática com HTTPS, usando essa pasta como raiz. Abra a URL publicada e confira a imagem, um cartão bloqueado e o botão para adicionar o aniversário ao Google Agenda.
+O GitHub Pages publica os arquivos da raiz do repositório. A pasta `dist` guarda a cópia de distribuição. Ao atualizar o calendário, mantenha os arquivos correspondentes das duas pastas iguais. Abra a URL publicada e confira a imagem, um cartão bloqueado e o botão para adicionar o aniversário ao Google Agenda.
 
 ## Liberar uma surpresa
 
-As datas usam o horário de Brasília. A contagem termina à meia-noite de 25/11/2026. Os oito cartões ficam bloqueados até sua data e até a equipe publicar o texto correspondente.
+As datas usam o horário de Brasília. O DubWorks Gaming de 07/11/2026 e seu check-in abrem às 12h. Os outros cartões abrem à meia-noite de sua data, depois que a equipe publica o conteúdo correspondente. A contagem do aniversário termina à meia-noite de 25/11/2026.
 
 1. No dia da revelação, abra `dist/surpresas.js` em um editor de texto.
 2. Acrescente uma entrada com o dia, título e texto. Preserve as entradas já divulgadas.
