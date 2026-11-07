@@ -6,7 +6,7 @@ O GitHub Pages publica os arquivos da raiz do repositório. A pasta `dist` guard
 
 ## Liberar uma surpresa
 
-As datas usam o horário de Brasília. O DubWorks Gaming de 07/11/2026 e seu check-in abrem às 12h. Os outros cartões abrem à meia-noite de sua data, depois que a equipe publica o conteúdo correspondente. A contagem do aniversário termina à meia-noite de 25/11/2026.
+As datas usam o horário de Brasília. O desafio de dublagem de 07/11/2026 e seu check-in abrem às 12h. Os outros cartões abrem à meia-noite de sua data, depois que a equipe publica o conteúdo correspondente. A contagem do aniversário termina à meia-noite de 25/11/2026.
 
 1. No dia da revelação, abra `dist/surpresas.js` em um editor de texto.
 2. Acrescente uma entrada com o dia, título e texto. Preserve as entradas já divulgadas.

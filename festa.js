@@ -31,7 +31,7 @@ function renderAttendance(day, now) {
   const state = attendanceState(day, now);
   document.querySelector("#check-in-status").textContent = {
     future: day === 7
-      ? "O DubWorks Gaming e o check-in abrem em 07/11 às 12h, no horário de Brasília."
+      ? "O desafio de dublagem e o check-in abrem em 07/11 às 12h, no horário de Brasília."
       : "Abre nesta data, à meia-noite no horário de Brasília.",
     open: "Copie o código e envie o formulário com sua conta Google até o fim do dia.",
     closed: "O check-in desta data foi encerrado."
