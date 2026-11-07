@@ -3,7 +3,7 @@
 const days = [7, 10, 13, 16, 19, 22, 25, 28];
 const dateKey = day => `2026-11-${String(day).padStart(2, "0")}`;
 const midnight = day => Date.parse(`${dateKey(day)}T00:00:00-03:00`);
-const opening = day => midnight(day) + (day === 7 ? 12 * 60 * 60 * 1000 : 0);
+const opening = day => midnight(day) + (day === 7 ? (12 * 60 + 30) * 60 * 1000 : 0);
 const dialog = document.querySelector("#detail");
 const confetti = document.querySelector("#confetti");
 const clock = document.querySelector("#clock");
