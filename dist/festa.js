@@ -3,6 +3,7 @@
 const days = [7, 10, 13, 16, 19, 22, 25, 28];
 const dateKey = day => `2026-11-${String(day).padStart(2, "0")}`;
 const midnight = day => Date.parse(`${dateKey(day)}T00:00:00-03:00`);
+const opening = day => midnight(day) + (day === 7 ? 12 * 60 * 60 * 1000 : 0);
 const dialog = document.querySelector("#detail");
 const confetti = document.querySelector("#confetti");
 const clock = document.querySelector("#clock");
@@ -21,7 +22,7 @@ document.querySelector("#view-check-in-dates").addEventListener("click", event =
 });
 
 function attendanceState(day, now) {
-  if (now < midnight(day)) return "future";
+  if (now < opening(day)) return "future";
   if (now >= midnight(day) + 86400000) return "closed";
   return "open";
 }
@@ -29,7 +30,9 @@ function attendanceState(day, now) {
 function renderAttendance(day, now) {
   const state = attendanceState(day, now);
   document.querySelector("#check-in-status").textContent = {
-    future: "Abre nesta data, à meia-noite no horário de Brasília.",
+    future: day === 7
+      ? "O DubWorks Gaming e o check-in abrem em 07/11 às 12h, no horário de Brasília."
+      : "Abre nesta data, à meia-noite no horário de Brasília.",
     open: "Copie o código e envie o formulário com sua conta Google até o fim do dia.",
     closed: "O check-in desta data foi encerrado."
   }[state];
@@ -55,7 +58,7 @@ document.querySelector("#check-in-copy").addEventListener("click", async () => {
 
 function surprise(day, now) {
   const entry = published[dateKey(day)];
-  if (now >= midnight(day) && entry?.titulo?.trim() && entry?.texto?.trim()) return entry;
+  if (now >= opening(day) && entry?.titulo?.trim() && entry?.texto?.trim()) return entry;
   return null;
 }
 
@@ -84,7 +87,9 @@ function openCard(day, animate = true) {
   document.querySelector("#detail-icon").textContent = entry ? "🎉" : "🔒";
   document.querySelector("#detail-title").textContent = entry?.titulo ?? "Surpresa bloqueada";
   document.querySelector("#detail-text").textContent = entry?.texto ?? (
-    now >= midnight(day)
+    day === 7 && now < opening(day)
+      ? "A abertura está marcada para 07/11 às 12h, no horário de Brasília. Volte nesse horário para participar!"
+      : now >= opening(day)
       ? "A data chegou! A novidade ainda aguarda liberação pela DubWorks."
       : "Volte nesta data para conferir. A novidade aparece quando a DubWorks liberar."
   );
@@ -128,7 +133,8 @@ function renderCards(now) {
     const special = day === 25;
     const unlocked = states[index];
     const date = `${String(day).padStart(2, "0")}/11`;
-    const status = attendance[index] === "open" ? "✓ Check-in de hoje"
+    const status = day === 7 && now >= midnight(day) && now < opening(day) ? "🔒 Abre às 12h"
+      : attendance[index] === "open" ? "✓ Check-in de hoje"
       : unlocked ? "🎉 Ver novidade" : special ? "🔒 Dia do aniversário" : "🔒 Bloqueado";
     const card = document.createElement("button");
     card.type = "button";
