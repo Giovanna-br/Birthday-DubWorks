@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -19,65 +20,99 @@
 <script src="festa.js" defer></script>
 </head>
 <body>
+
 <div class="page-balloons" aria-hidden="true">
   <span></span><span></span><span></span><span></span>
 </div>
+
 <header class="hero">
-<h1><img class="hero-logo" src="logo-dubworks.png" alt="DubWorks — Aniversário"></h1>
+  <h1>
+    <img class="hero-logo" src="logo-dubworks.png" alt="DubWorks — Aniversário">
+  </h1>
 </header>
+
 <main>
+
 <section class="count" aria-labelledby="count-title">
-<p class="eyebrow">✦ DUBWORKS FAZ 1 ANO ✦</p>
-<h2 id="count-title">O grande dia é 25/11!</h2>
-<div id="clock" class="clock" role="timer" aria-label="Tempo até o aniversário"></div>
-<p id="clock-note">25 de novembro de 2026 · horário de Brasília</p>
+  <p class="eyebrow">✦ DUBWORKS FAZ 1 ANO ✦</p>
+  <h2 id="count-title">O grande dia é 25/11!</h2>
+  <div id="clock" class="clock" role="timer" aria-label="Tempo até o aniversário"></div>
+  <p id="clock-note">25 de novembro de 2026 · horário de Brasília</p>
 </section>
+
 <section class="board" aria-labelledby="board-title">
-<div class="rings" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-<p class="eyebrow month">NOVEMBRO 2026</p>
-<h2 id="board-title" tabindex="-1">✨ Calendário de novidades ✨</h2>
-<p class="intro">Oito datas, oito mistérios. Toque em um cartão para espiar!</p>
-<div id="cards" class="cards"></div>
-<noscript>Ative o JavaScript para abrir os cartões e ver a contagem regressiva.</noscript>
+  <div class="rings" aria-hidden="true">
+    <i></i><i></i><i></i><i></i>
+  </div>
+
+  <p class="eyebrow month">NOVEMBRO 2026</p>
+
+  <h2 id="board-title" tabindex="-1">
+    ✨ Calendário de novidades ✨
+  </h2>
+
+  <p class="intro">
+    Oito datas, oito mistérios. Toque em um cartão para espiar!
+  </p>
+
+  <div id="cards" class="cards"></div>
+
+  <noscript>
+    Ative o JavaScript para abrir os cartões e ver a contagem regressiva.
+  </noscript>
 </section>
-<section class="agenda attendance" aria-labelledby="attendance-title">
-<div>
-<h2 id="attendance-title">Passaporte da festa</h2>
-<p>No dia de cada evento, abra o cartão, copie o código e envie o formulário com sua conta Google. Use o mesmo e-mail nas oito datas para ficar elegível ao emblema de aniversário no encerramento de 28/11.</p>
-<small>O envio pelo Google Forms registra a presença. Cada data conta uma vez, no horário de Brasília.</small>
-</div>
-<a class="cta" id="view-check-in-dates" href="#board-title">Ver datas de check-in</a>
-</section>
+
 <section class="agenda" aria-labelledby="agenda-title">
-<div>
-<h2 id="agenda-title">Marque na agenda!</h2>
-<p>Adicione o aniversário de 1 ano da DubWorks ao seu Google Agenda em 25 de novembro. É só abrir e salvar o evento!</p>
-</div>
-<div class="agenda-links">
-<a class="cta" id="add-birthday-agenda" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=1%20ano%20da%20DubWorks&amp;dates=20261125%2F20261126&amp;details=Anivers%C3%A1rio%20de%201%20ano%20da%20comunidade%20DubWorks.%20Confira%20as%20novidades%20no%20site%20do%20evento." target="_blank" rel="noopener noreferrer">📅 Adicionar aniversário da DubWorks ao Google Agenda ↗</a>
-</div>
+  <div>
+    <h2 id="agenda-title">Marque na agenda!</h2>
+    <p>
+      Adicione o aniversário de 1 ano da DubWorks ao seu Google Agenda em
+      25 de novembro. É só abrir e salvar o evento!
+    </p>
+  </div>
+
+  <div class="agenda-links">
+    <a
+      class="cta"
+      id="add-birthday-agenda"
+      href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=1%20ano%20da%20DubWorks&amp;dates=20261125%2F20261126&amp;details=Anivers%C3%A1rio%20de%201%20ano%20da%20comunidade%20DubWorks.%20Confira%20as%20novidades%20no%20site%20do%20evento."
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      📅 Adicionar aniversário da DubWorks ao Google Agenda ↗
+    </a>
+  </div>
 </section>
+
 </main>
-<footer>✦ DUBWORKS · 1º ANIVERSÁRIO ✦</footer>
+
+<footer>
+  ✦ DUBWORKS · 1º ANIVERSÁRIO ✦
+</footer>
+
 <dialog id="detail" aria-labelledby="detail-title">
-<form method="dialog"><button class="close" aria-label="Fechar">×</button></form>
-<p id="detail-date" class="eyebrow month"></p>
-<div id="detail-icon" class="detail-icon" aria-hidden="true"></div>
-<h2 id="detail-title"></h2>
-<p id="detail-text"></p>
-<div id="detail-links" class="detail-links" hidden></div>
-<section class="check-in-panel" aria-labelledby="check-in-title">
-<h3 id="check-in-title">Check-in do dia</h3>
-<p id="check-in-status"></p>
-<div id="check-in-actions" class="detail-links" hidden>
-<input id="check-in-code" aria-label="Código do evento" readonly>
-<button type="button" class="cta" id="check-in-copy">Copiar código</button>
-<a class="cta" href="https://docs.google.com/forms/d/e/1FAIpQLSfippGknSlzCZu9kf9PTaiIxMmQyG1Qzw1EHGW7TdVOnid4tQ/viewform" target="_blank" rel="noopener noreferrer">Abrir formulário ↗</a>
-</div>
-<p id="check-in-feedback" role="status"></p>
-</section>
-<form method="dialog"><button class="cta">Voltar ao calendário</button></form>
+
+  <form method="dialog">
+    <button class="close" aria-label="Fechar">×</button>
+  </form>
+
+  <p id="detail-date" class="eyebrow month"></p>
+
+  <div id="detail-icon" class="detail-icon" aria-hidden="true"></div>
+
+  <h2 id="detail-title"></h2>
+
+  <p id="detail-text"></p>
+
+  <div id="detail-links" class="detail-links" hidden></div>
+
+  <form method="dialog">
+    <button class="cta">Voltar ao calendário</button>
+  </form>
+
 </dialog>
+
 <div id="confetti" aria-hidden="true"></div>
+
 </body>
 </html>
