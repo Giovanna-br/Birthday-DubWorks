@@ -10,8 +10,14 @@ window.dubworksSurpresas = {
     ]
   },
   "2026-11-10": {
-    titulo: "Novidades da comunidade",
-    texto: "Confira as novidades e atualizações da DubWorks, incluindo os formulários e as mudanças na organização da comunidade."
+    titulo: "📢 A SEGUNDA SURPRESA DA DUBWORKS CHEGOU! 🎁✨",
+    texto: "Nosso mês de aniversário continua e mais uma novidade foi desbloqueada! 👀🔓\n\nPrimeiramente, pedimos desculpas pela demora. Hoje trazemos algumas mudanças e melhorias que muitos de vocês já haviam solicitado.\n\n🎙️ 1. MUDANÇAS NAS COLLABS\n\nA partir de 13 de novembro, o grupo de Collabs será desativado e substituído por um formulário. Até lá, vamos avisar todos os dias sobre a mudança.\n\nEssa mudança acontece porque algumas comunidades estavam utilizando o grupo para recrutar membros, algo que não é permitido pelas nossas regras.\n\nAs collabs independentes aprovadas poderão ser divulgadas no Canal de Projetos e nos Avisos da Comunidade, dando mais visibilidade aos projetos de vocês. 💙\n\n💬 2. NOVOS GRUPOS NA COMUNIDADE\n\n📞 Grupo de Call\nUm espaço para vocês conversarem por chamadas, interagirem e passarem um tempo juntos!\n\n🔒 Grupo Surpresa\nA proposta do segundo grupo será revelada na próxima data do nosso calendário de aniversário, em 13/11. 👀\n\n📝 3. FORMULÁRIOS DA COMUNIDADE\n\nAtendendo aos pedidos de vocês, disponibilizamos novos formulários para facilitar a comunicação com a administração. Use os botões abaixo para acessar Denúncias, Feedback da Comunidade, Proposta de Projetos e Parcerias.\n\n📌 Esses links também serão adicionados futuramente à descrição da comunidade.\n\nDUBWORKS — 1 ANO DE HISTÓRIAS, TALENTOS E CONQUISTAS! 🎉",
+    links: [
+      { rotulo: "🚨 Denúncias", url: "https://forms.gle/xeWogjLCkudWJSza7" },
+      { rotulo: "💬 Feedback da Comunidade", url: "https://forms.gle/2pYyqNSvPBWg8jfAA" },
+      { rotulo: "🎬 Proposta de Projetos", url: "https://forms.gle/bwu7zTi4KT3JbAAU6" },
+      { rotulo: "🤝 Parcerias", url: "https://forms.gle/bCRMVwCNG7H3e8uQ9" }
+    ]
   },
   "2026-11-13": {
     titulo: "DubWorks Gaming",
