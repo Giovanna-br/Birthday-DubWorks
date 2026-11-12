@@ -1,7 +1,7 @@
 
 "use strict";
 
-const days = [7, 10, 13, 16, 19, 22, 25, 28];
+const days = [7, 10, 13, 16, 19, 22, 25, 27];
 
 const dateKey = day =>
   `2026-11-${String(day).padStart(2, "0")}`;
